@@ -184,7 +184,7 @@ def interview_agent():
             else:
                 state["answers"].append(answer.strip())
                 state["q_index"] += 1
-                st.experimental_rerun()
+                st.rerun()
     else:
         # All questions answered – simple evaluation
         st.success("Interview completed! 🎉")
@@ -281,3 +281,4 @@ elif agent_choice == "Interview Agent":
     interview_agent()
 elif agent_choice == "Onboarding Assistant":
     onboarding_agent()
+
